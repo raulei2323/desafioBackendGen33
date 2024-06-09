@@ -7,7 +7,7 @@ const app = express()
 
 app.use(express.json())
 
-app.use("/devto", userUsecase)
+app.use("/main", userUsecase)
 
 
 app.get("/", (request, response) => {

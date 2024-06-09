@@ -11,6 +11,6 @@ async function getAllPost() {
 }
 
 module.exports = {
-    create,
-    getAll,
+    createPost,
+    getAllPost,
 }

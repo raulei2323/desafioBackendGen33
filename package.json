@@ -4,7 +4,8 @@
   "description": "Proyecto de desafio de modulo backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "node --watch index.js"
   },
   "keywords": [
     "desafiobackendgen33"
