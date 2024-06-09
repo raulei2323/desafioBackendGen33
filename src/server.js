@@ -1,13 +1,20 @@
-const express = require("express")
+const express = require('express')
+
+const userUsecase = require("./routes/user.router")
+
 
 const app = express()
 
 app.use(express.json())
 
+app.use("/devto", userUsecase)
+
+
 app.get("/", (request, response) => {
     response.json({
-        message: "Devto API"
+        message: "DevTo API"
     })
 })
+
 
 module.exports = app
