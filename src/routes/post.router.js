@@ -1,6 +1,6 @@
 const express = require ("express")
 
-const userUsecases = require("../usecases/user.usecase")
+const postUsecases = require("../usecases/post.usecase")
 
 const router = express.Router()
 
@@ -8,7 +8,7 @@ const router = express.Router()
 //Get /post
 router.get("/", async (request, response) => {
     try {
-        const posts = await userUsecases.getAllPost()
+        const posts = await postUsecases.getAllPost()
         response.json({
             success: true,
             data: { posts }
@@ -26,7 +26,7 @@ router.get("/", async (request, response) => {
 // POST /main
 router.post("/", async (request, response) => {
     try {
-        const postCreated = await userUsecases.createPost(request.body)
+        const postCreated = await postUsecases.createPost(request.body)
         response.json({
             success: true,
             data: { post: postCreated } 

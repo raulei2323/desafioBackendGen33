@@ -1,13 +1,13 @@
 const express = require('express')
 
-const userUsecase = require("./routes/user.router")
+const postUsecase = require("./routes/post.router")
 
 
 const app = express()
 
 app.use(express.json())
 
-app.use("/main", userUsecase)
+app.use("/main", postUsecase)
 
 
 app.get("/", (request, response) => {
