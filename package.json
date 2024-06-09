@@ -1,0 +1,19 @@
+{
+  "name": "desafiobackendgen33",
+  "version": "1.0.0",
+  "description": "Proyecto de desafio de modulo backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "desafiobackendgen33"
+  ],
+  "author": "Raul Elizalde Ibarra",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  }
+}
