@@ -32,8 +32,19 @@ async function deleteById(id) {
 }
 
 async function updateById(id, newUserData) {
+    const userFound = await Users.findOne({email: newUserData.email})
+
+    if(userFound) {
+        throw createError(409, "Email already in use")
+    }
+    const password = await encrypt.encrypt(newUserData.password)
+    newUserData.password = password
+
     const updatedUser = await Users.findByIdAndUpdate(id, newUserData, { new: true }) 
+
+
     return updatedUser
+
 }
 
 module.exports = {
