@@ -1,10 +1,10 @@
 const express = require("express")
-
 const usersUsecase = require("../usecases/users.usecase")
+const auth = require("../middlewares/auth.middleware")
 
 const router = express.Router()
 
-router.get("/", async (request, response) => {
+router.get("/", auth, async (request, response) => {
     try {
         const users = await usersUsecase.getAll()
         response.json({
@@ -35,7 +35,7 @@ router.get("/", async (request, response) => {
     }
  })
 
- router.get("/:id", async (request, response) => {
+ router.get("/:id", auth, async (request, response) => {
     try {
         const { id } = request.params
         const user = await usersUsecase.getById(id)
@@ -52,7 +52,7 @@ router.get("/", async (request, response) => {
     }
 })
 
-router.delete("/:id", async (request, response) => {
+router.delete("/:id", auth, async (request, response) => {
     try {
         const { id } = request.params
         const userDeleted = await usersUsecase.deleteById(id)
@@ -69,7 +69,7 @@ router.delete("/:id", async (request, response) => {
     }
  })
 
-router.patch("/:id", async (request, response) => {
+router.patch("/:id", auth, async (request, response) => {
     try {
         const { id } = request.params
         const userUpdated = await usersUsecase.updateById(id, request.body)
