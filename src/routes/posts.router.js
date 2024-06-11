@@ -27,6 +27,7 @@ router.get("/", async (request, response) => {
 
 router.post("/", auth, async (request, response) => {
     try {
+        request.body.user=request.user
         const postCreated = await postsUsecase.create(request.body)
         response.json({
             success: true,
@@ -44,7 +45,8 @@ router.post("/", auth, async (request, response) => {
 router.delete("/:id", auth, async (request, response) => {
     try {
         const { id } = request.params
-        const postDeleted = await postsUsecase.deleteById(id)
+        const { user } = request
+        const postDeleted = await postsUsecase.deleteById(id, user)
         response.json({
             success: true,
             data: { post: postDeleted }

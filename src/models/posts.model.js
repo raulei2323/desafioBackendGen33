@@ -12,9 +12,9 @@ const schema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-    idFromUser:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"users"
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Users"
     },
     updated_at:{
         type:Date,
