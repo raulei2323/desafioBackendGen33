@@ -1,5 +1,6 @@
 const express = require ("express")
 const postsUsecase = require("../usecases/posts.usecase")
+const Users = require("../models/users.model")
 const auth = require("../middlewares/auth.middleware")
 
 const router = express.Router()

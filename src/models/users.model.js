@@ -3,6 +3,11 @@ const mongoose = require("mongoose")
 const modelName = "users"
 
 const schema = new mongoose.Schema({
+    profilePicture: {
+        type: String,
+        required: true,
+        maxLength: 100,
+    },
     firstName: {
         type: String,
         required: true,

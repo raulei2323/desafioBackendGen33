@@ -9,7 +9,7 @@ const app = express()
 
 app.use(express.json())
 
-app.use("/main", postsRouter)
+app.use("/post", postsRouter)
 app.use("/users", usersRouter)
 app.use("/auth", authRouter)
 
