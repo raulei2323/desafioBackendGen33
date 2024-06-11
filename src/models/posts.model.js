@@ -12,6 +12,14 @@ const schema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    idFromUser:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"users"
+    },
+    updated_at:{
+        type:Date,
+        default:Date.now
+    },
 
 })
 
