@@ -1,6 +1,6 @@
 # Proyecto desafio backend.
 
-#### Este repositorio cuenta con las diferentes versiones e implementaciones en el dessarrollo de una API Restful que cumplira con lo que necesitaria un servicio como dev.to para funcionar, la rama <main> es la rama que tiene la version mas actualizada y completamente funcional. Las demas ramas podrian estar aun en dessarrollo.
+#### Este repositorio cuenta con las diferentes versiones e implementaciones en el dessarrollo de una API Restful que cumplira con lo que necesitaria un servicio como dev.to para funcionar, la rama main es la rama que tiene la version mas actualizada y completamente funcional. Las demas ramas podrian estar aun en dessarrollo.
 
 ## Como iniciar esta API:
 
@@ -17,4 +17,18 @@
 #### Ambos comandos se ejecutan desde la terminal situandonos en la carpeta raiz del proyecto y para terminarlos podemos presionar las teclas ctrl + c
 
 #### Y por ultimo crear el archivo .env con las variables de entorno propias necesarias para el acceso a una base de datos, las variables necesarias estan indicadas en el archivo example.env
+
+## Usar la API
+
+#### Una vex iniciada la aplicacion podemos consumirla de la siguiente manera
+
+#### Con algun gestor de peticiones como Postman o la extension de thunderclient en vscode haremos diferentes tipos de peticiones a las distintas rutas. Cada combinacion de ambas tiene un objetivo distinto
+
+#### La direccion a realizar las peticiones es la siguiente:
+
+#### http://localhost:8080
+
+#### endpoints y sus peticiones
+
+
 
